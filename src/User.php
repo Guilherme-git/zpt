@@ -7,6 +7,7 @@ class User {
 	public function g($ids) {
 		$users = [];
         $ids_string = implode(',', $ids);
+
         $result = $this->db->q("SELECT username FROM user WHERE id IN ($ids_string)");
 
         while ($row = $result->fetch_assoc()) {
