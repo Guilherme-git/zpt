@@ -6,10 +6,12 @@ class User {
 
 	public function g($ids) {
 		$users = [];
+        $ids_string = implode(',', $ids);
+        $result = $this->db->q("SELECT username FROM user WHERE id IN ($ids_string)");
 
-		foreach ($ids as $id) {
-			$users[] = $this->db->q('SELECT username FROM user WHERE id = ' . $id);
-		}
+        while ($row = $result->fetch_assoc()) {
+            $users[] = $row['username'];
+        }
 
 		return $users;
 	}
