@@ -1,6 +1,8 @@
 <?php
 namespace Company;
 
+require_once './User.php';
+
 use User\User;
 
 class Company extends User {
