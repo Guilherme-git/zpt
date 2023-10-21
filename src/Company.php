@@ -1,7 +1,9 @@
 <?php
 namespace Company;
 
-class Company {
+use User\User;
+
+class Company extends User {
 	private int $id;
 
 	public function greetings() {

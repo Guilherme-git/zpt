@@ -2,7 +2,7 @@
 namespace User;
 
 class User {
-	private $db;
+	protected $db;
 
 	public function getUsersByIds($ids) {
 		$users = [];

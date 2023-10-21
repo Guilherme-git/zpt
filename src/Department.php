@@ -1,9 +1,11 @@
 <?php
 namespace Department;
 
+use User\User;
+
 require_once './User.php';
 
-class Department {
+class Department extends User {
 	private User\User $user;
 
 	public function __construct() {
