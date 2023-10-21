@@ -1,9 +1,9 @@
 <?php
 namespace Department;
 
-use User\User;
-
 require_once './User.php';
+
+use User\User;
 
 class Department extends User {
 	private User\User $user;
