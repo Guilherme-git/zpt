@@ -6,10 +6,10 @@ require_once './User.php';
 use User\User;
 
 class Department extends User {
-	private User\User $user;
+	private User $user;
 
 	public function __construct() {
-		$this->user = new User\User(); // @todo fixme
+		$this->user = new User(); // @todo fixme
 	}
 
     public function getLargestDepartmentForEachUser() {
@@ -35,4 +35,6 @@ class Department extends User {
         return $departments;
     }
 }
+
+$d = new Department();
 ?>
