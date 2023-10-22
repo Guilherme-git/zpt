@@ -1,7 +1,11 @@
 <?php
 namespace Company;
 
-class Company {
+require_once './User.php';
+
+use User\User;
+
+class Company extends User {
 	private int $id;
 
 	public function greetings() {
